@@ -49,7 +49,8 @@ public class AlquilarVehiculo extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		int id= Integer.parseInt(request.getParameter("id"));
+		//int id= Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("id"));
 		HttpSession sesion = request.getSession();
 		VehiculoDAO vDAO = new VehiculoDAOImplHibernate();
 		Vehiculo v = vDAO.obtener(id);

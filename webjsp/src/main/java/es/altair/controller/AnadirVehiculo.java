@@ -77,7 +77,7 @@ public class AnadirVehiculo extends HttpServlet {
 		vDAO.insertar(v);
 		
 		
-		response.sendRedirect("jsp/principalUsuario");
+		response.sendRedirect("jsp/principal");
 	}
 
 //	private String getFileName(Part filePart) {

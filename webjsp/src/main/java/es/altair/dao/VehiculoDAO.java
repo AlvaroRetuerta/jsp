@@ -24,4 +24,8 @@ public interface VehiculoDAO {
 	
 	public List<Vehiculo> listarDisponibles();
 	
+	public Vehiculo obtener(String id);
+
+	public void editar(int id, String marca, String modelo, String matricula, int anyo);
+	
 }

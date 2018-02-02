@@ -26,19 +26,19 @@ public class Vehiculo implements Serializable{
 	private String matricula;
 	private String marca;
 	private String modelo;
-	private int año;
+	private int anyo;
 	private String pais;
 	private byte[] imagen;
 	
 	@OneToMany(mappedBy="vehiculo")
 	Set<Alquiler> alquileres= new HashSet<Alquiler>();
 	
-	public Vehiculo(String matricula, String marca, String modelo, int año, String pais) {
+	public Vehiculo(String matricula, String marca, String modelo, int anyo, String pais) {
 		super();
 		this.matricula = matricula;
 		this.marca = marca;
 		this.modelo = modelo;
-		this.año = año;
+		this.anyo = anyo;
 		this.pais = pais;
 
 	}
@@ -75,12 +75,12 @@ public class Vehiculo implements Serializable{
 		this.modelo = modelo;
 	}
 
-	public int getAño() {
-		return año;
+	public int getAnyo() {
+		return anyo;
 	}
 
-	public void setAño(int año) {
-		this.año = año;
+	public void setAnyo(int anyo) {
+		this.anyo = anyo;
 	}
 
 	public String getPais() {
@@ -111,10 +111,17 @@ public class Vehiculo implements Serializable{
 		super();
 	}
 
+	public Vehiculo(String matricula, String marca, String modelo, int anyo) {
+		this.matricula = matricula;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anyo = anyo;
+	}
+
 	@Override
 	public String toString() {
 		return "Vehiculo [idVehiculo=" + idVehiculo + ", matricula=" + matricula + ", marca=" + marca + ", modelo="
-				+ modelo + ", año=" + año + ", pais=" + pais + ", imagen=" + Arrays.toString(imagen) + "]";
+				+ modelo + ", anyo=" + anyo + ", pais=" + pais + ", imagen=" + Arrays.toString(imagen) + "]";
 	}
 
 	
